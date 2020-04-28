@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <aside class="col-sm-6">
+      <div class="card" style="margin-top: 7rem; width: 18rem;">
+        <img src="<%= gravatar_url(@user, { size: 300 }) %>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= @user.name %></h5>
+            <p class="card-text">プロフィール</p>
+          </div>
+      </div>
+    </aside>
+    <div class="col-12">
+      <%= render 'posts/posts', posts: @posts %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+
+  <% posts.each do |post| %>
+  <div class="card mt-3 mb-3">
+    <h5 class="card-header"><%= link_to post.title, post_path(post) %></h5>
+    <div class="card-body">
+      <h5 class="card-title"><span class="text-muted"><%= post.created_at %></span></h5>
+    </div>
+  </div>
+  <% end %>
