@@ -6,6 +6,9 @@
           <div class="card-body">
             <h5 class="card-title"><%= @user.name %></h5>
             <p class="card-text">プロフィール</p>
+            <p class="nav justify-content-center">
+              <%= link_to '投稿', new_post_path, class: 'btn btn-lg btn-primary' %>
+            </p>
           </div>
       </div>
     </aside>

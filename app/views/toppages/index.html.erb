@@ -30,14 +30,16 @@
         <!-- Portfolio Section-->
         
         <!-- About Section-->
+        <% if logged_in? %>
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <h1>記事一覧</h1>
+              <h1 class="h1 mt-3">記事一覧</h1>
                 <%= render 'posts/posts', posts: @posts %>
             </div>    
           </div>
         </div>
+        <% end %>
         <!-- Contact Section-->
 
         <!-- Footer-->

@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @posts = @user.posts.order('created_at DESC').page(params[:page])
     counts(@user)
-    @posts = Post.all
+    
   end  
   
   def new

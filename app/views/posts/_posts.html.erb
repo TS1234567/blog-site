@@ -4,6 +4,11 @@
     <h5 class="card-header"><%= link_to post.title, post_path(post) %></h5>
     <div class="card-body">
       <h5 class="card-title"><span class="text-muted"><%= post.created_at %></span></h5>
+      <div>
+        <% if current_user == post.user %>
+          <%= link_to "Delete", post, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-primary btn-xs' %>
+        <% end %>
+      </div>
     </div>
   </div>
   <% end %>
