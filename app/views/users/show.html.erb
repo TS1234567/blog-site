@@ -5,11 +5,9 @@
         <img src="<%= gravatar_url(@user, { size: 300 }) %>" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title"><%= @user.name %></h5>
-            <p class="card-text">
-              <%= render 'profiles/profiles', profiles: @profiles %></p>
+            <p class="card-text">プロフィール</p>
             <p class="nav justify-content-center">
               <%= link_to '投稿', new_post_path, class: 'btn btn-lg btn-primary' %>
-              <%= link_to 'プロフィール作成', new_profile_path, class: 'btn btn-lg btn-primary mt-3' %>
             </p>
           </div>
       </div>
