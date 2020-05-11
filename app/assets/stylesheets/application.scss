@@ -27,6 +27,8 @@
  
  @import "bootstrap";
 
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
 
 /*!
  * Start Bootstrap - Agency v5.2.2 (https://startbootstrap.com/template-overviews/agency)
@@ -10235,4 +10237,8 @@ form .row:first-child .floating-label-form-group {
 
 .copyright {
   background-color: #1a252f;
+}
+
+.fa-lg {
+  font-size: 100px;
 }

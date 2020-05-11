@@ -1,0 +1,25 @@
+<div class="text-center mt-5">
+  <h2>コメント一覧</h2>  
+    <% @post.comments.each do |comment| %>
+      <div>
+        <p><%= comment.id %></p>
+        <p><%= comment.content %></p>
+      </div>
+        <div class="btn-group">
+          <% if current_user == comment.user %>
+            <%= link_to "Delete", post_comment_path(@post, comment), method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-primary btn-xs' %>
+          <% end %> 
+       </div>
+      
+        
+
+    <% end %>  
+    <%= form_for [@post, @comment] do |f| %>
+      <%= f.text_field :content %>
+      <br>
+      <%= f.submit 'コメントする' %>
+    <% end %>
+
+    <%= link_to "ホームへ戻る", root_path %>
+  </div>
+</div>
